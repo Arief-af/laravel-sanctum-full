@@ -1,5 +1,4 @@
 laravel new namaProject
-Setting ENV
 
 Install Fortify
 -----------------------------------
@@ -15,6 +14,7 @@ Disable views in config/fortify.php
 ------------------------------------
 
 Install Sanctum
+-----------------------------------
 composer require laravel/sanctum
 php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
 
@@ -25,15 +25,17 @@ add HasApiTokens to user models ( optional )
 
 ---------------------------------------------
 
-Setting cors on config/cors.php
+Setting cors 
+---------------------------------------------
 Add 'api/*', 
         'login',
         'logout',
         'register',
         'forgot-password',
         'reset-password',
-to paths
-setting cors .env
+to paths on config/cors.php
+
+setting .env
 ADD :
 SANCTUM_STATEFUL_DOMAINS=localhost:8080
 SESSION_DOMAIN=localhost
